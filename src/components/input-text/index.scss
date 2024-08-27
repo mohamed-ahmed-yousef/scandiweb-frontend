@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.wrapper {
+
+  .label {
+    color: $gray-600;
+    margin-bottom: 0.25em;
+  }
+
+  .input {
+    border: 1px solid $gray-400;
+    color: $gray-600;
+    border-radius: 0.25em;
+    width: 100%;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 200;
+    font-family: inherit;
+
+    &:focus {
+      outline: 2px solid $secondary;
+    }
+  }
+
+  .validationMessage {
+    font-size: 0.8em;
+    color: $red-700;
+  }
+
+}
+
