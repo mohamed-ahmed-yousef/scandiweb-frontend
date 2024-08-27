@@ -27,10 +27,6 @@
 	},
 	"overrides": [
 		{
-			"include": [
-				"./packages/plate-editor/**/*.ts",
-				"./packages/plate-editor/**/*.tsx"
-			],
 			"linter": {
 				"rules": {
 					"suspicious": {
@@ -51,5 +47,11 @@
 				}
 			}
 		}
-	]
+	],
+	"css": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab"
+		}
+	}
 }
