@@ -1,9 +1,9 @@
-import { Button } from "./components/button";
-import { Form } from "./components/form/form.tsx";
-import { TextInput } from "./components/input-text";
-import { Select } from "./components/select";
+import { Button } from "../components/button";
+import { Form } from "../components/form/form.tsx";
+import { TextInput } from "../components/input-text";
+import { Select } from "../components/select";
 
-export default function FromTester() {
+export default function AddProduct() {
 	const onSubmit = (data: FormData) => {
 		console.log(Object.fromEntries(data.entries()));
 	};
@@ -16,7 +16,7 @@ export default function FromTester() {
 				<TextInput
 					label="Email:"
 					id="email"
-					type="email"
+					type="number"
 					name="email"
 					required
 				/>

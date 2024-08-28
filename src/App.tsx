@@ -1,16 +1,14 @@
+import { Link } from "react-router-dom";
 import { BACKEND_URL } from "../utils/constants";
-import { Button } from "./components/button";
-import FromTester from "./form.tsx";
+import { ShowProduct } from "./Home";
 
-export default function App() {
+export default function HomePage() {
 	console.log(BACKEND_URL, "BACKEND_URL");
 	return (
 		<main>
-			<Button variant={"solid"}>Submit me</Button>
-			<Button variant={"white"}>Submit me</Button>
-			<Button variant={"disabled"}>Submit me</Button>
-			<Button variant={"cancel"}>Submit me</Button>
-			<FromTester />
+			<Link to={"/"}>Home</Link>
+			<Link to={"/addproduct"}>Add Product</Link>
+			<ShowProduct />
 		</main>
 	);
 }
