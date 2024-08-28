@@ -7,6 +7,8 @@ import { router } from "./routes/root.tsx";
 // biome-ignore lint/style/noNonNullAssertion: No need here
 createRoot(document.getElementById("root")!).render(
 	<StrictMode>
-		<RouterProvider router={router} />
+		<main className={"container"}>
+			<RouterProvider router={router} />
+		</main>
 	</StrictMode>,
 );
