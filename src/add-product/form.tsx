@@ -41,11 +41,11 @@ export function AddProductForm() {
 				required
 			/>
 			{!categoy && (
-				<h3>Please select a type to display the remaining fields</h3>
+				<h4>Please select a type to display the remaining fields</h4>
 			)}
 			{categoy === "DVD" && (
 				<>
-					<h3>Please, provide size</h3>
+					<h4>Please, provide size</h4>
 					<TextInput
 						label={"Size (MB)"}
 						id="size"
@@ -60,7 +60,7 @@ export function AddProductForm() {
 
 			{categoy === "Book" && (
 				<>
-					<h3>Please, provide weight</h3>
+					<h4>Please, provide weight</h4>
 					<TextInput
 						label={"Weight (KG)"}
 						id="weight"
@@ -74,7 +74,7 @@ export function AddProductForm() {
 			)}
 			{categoy === "Furniture" && (
 				<>
-					<h3>Please, provide dimensions</h3>
+					<h4>Please, provide dimensions</h4>
 
 					<TextInput
 						label={"Height (CM)"}

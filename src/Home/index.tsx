@@ -7,6 +7,7 @@ import { Card } from "../components/card";
 import "./index.scss";
 import { useState } from "react";
 import { NavBar } from "./navbar.tsx";
+import { NoProductItem } from "./no-data.tsx";
 import { ProductSkeleton } from "./skeleton.tsx";
 
 export function ShowProduct() {
@@ -18,6 +19,10 @@ export function ShowProduct() {
 	return (
 		<section className={"home"}>
 			<NavBar checkedProducts={checkedProducts} />
+			<NoProductItem
+				data={ProductsList?.data}
+				isLoading={!ProductsList?.data}
+			/>
 			<section className={"products"}>
 				{!ProductsList?.data &&
 					Array.from({ length: 10 }).map((_, index) => (
@@ -25,6 +30,7 @@ export function ShowProduct() {
 							<ProductSkeleton key={index.toString()} />
 						</>
 					))}
+
 				{Array.isArray(ProductsList?.data) &&
 					ProductsList?.data.map((item) => (
 						<Card

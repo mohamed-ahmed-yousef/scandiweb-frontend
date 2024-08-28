@@ -9,18 +9,14 @@
   gap: 12px;
   margin: auto;
   max-width: min(500px, 95vw);
-  padding:1rem;
-
-
-  }
-
-.submitted {
-    input:invalid {
-        border-color: $red-700;
-    }
-    input:invalid:focus {
-      outline-color: $red-700;
-    }
+  padding: 1rem;
 }
 
-
+.submitted {
+  input:invalid {
+    border-color: $red-700;
+  }
+  input:invalid:focus {
+    outline-color: $red-700;
+  }
+}

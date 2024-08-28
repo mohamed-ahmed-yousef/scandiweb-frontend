@@ -1,7 +1,7 @@
-import { type FormEvent, useState } from "react";
+import { type FormEvent, type HTMLProps, useState } from "react";
 import "./index.scss";
 
-interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
+interface TextInputProps extends HTMLProps<HTMLInputElement> {
 	id: string;
 	name: string;
 	className?: string;
