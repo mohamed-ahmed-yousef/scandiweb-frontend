@@ -27,6 +27,6 @@ export function useQuery<T>({ queryFn }: { queryFn: QueryFn<T> }) {
 		fetchData();
 
 		return () => {};
-	}, []);
+	}, [queryFn]);
 	return { data, loading, error };
 }

@@ -1,22 +1,25 @@
 import {
 	useCreateProduct,
-	useDeleteProducts,
+	// useDeleteProducts,
 	useGetProducts,
 } from "../../api/hooks/use-product.ts";
-import { Button } from "../components/button/index.tsx";
 import { Card } from "../components/card";
 import "./index.scss";
 import { useState } from "react";
+import { NavBar } from "./navbar.tsx";
+import { ProductSkeleton } from "./skeleton.tsx";
 
 export function ShowProduct() {
 	const [checkedProducts, setCheckedProducts] = useState<number[]>([]);
-	const { data } = useGetProducts();
+	const ProductsList = useGetProducts();
 	const createProduct = useCreateProduct();
-	const deleteProducts = useDeleteProducts();
+	// const deleteProducts = useDeleteProducts();
 
+	// @ts-ignore
 	return (
 		<section className={"home"}>
-			Product will display here....
+			<NavBar checkedProducts={checkedProducts} />
+
 			<button
 				onClick={async () =>
 					createProduct.mutate({
@@ -31,26 +34,23 @@ export function ShowProduct() {
 			>
 				Click to add prodcut
 			</button>
-			<Button
-				variant={"primary"}
-				onClick={() => {
-					deleteProducts.mutate(checkedProducts);
-				}}
-			>
-				Mass Delete
-			</Button>
-			<div className={"products-container"}>
-				<section className={"products"}>
-					{Array.isArray(data) &&
-						data.map((item) => (
-							<Card
-								key={item.id}
-								product={item}
-								setCheckedProducts={setCheckedProducts}
-							/>
-						))}
-				</section>
-			</div>
+
+			<section className={"products"}>
+				{!ProductsList?.data &&
+					Array.from({ length: 10 }).map((_, index) => (
+						<>
+							<ProductSkeleton key={index.toString()} />
+						</>
+					))}
+				{Array.isArray(ProductsList?.data) &&
+					ProductsList?.data.map((item) => (
+						<Card
+							key={item.id}
+							product={item}
+							setCheckedProducts={setCheckedProducts}
+						/>
+					))}
+			</section>
 		</section>
 	);
 }

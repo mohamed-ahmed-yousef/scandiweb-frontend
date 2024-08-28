@@ -3,7 +3,7 @@ import "./index.scss";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode;
-	variant: string;
+	variant: "primary" | "secondary" | "danger";
 	type?: "submit" | "button";
 }
 

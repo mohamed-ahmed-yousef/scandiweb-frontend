@@ -6,6 +6,7 @@ import { useQuery } from "./use-query";
 export function useGetProducts() {
 	return useQuery({
 		queryFn: ClientAPI.product.getProducts,
+		queryKey: "list-products",
 	});
 }
 
