@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../App.tsx";
-import AddProduct from "../add-product/form.tsx";
+import AddProduct from "../add-product";
 
 export const router = createBrowserRouter([
 	{
