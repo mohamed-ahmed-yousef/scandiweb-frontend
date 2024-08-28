@@ -5,10 +5,10 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid $gray-800;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
   h1 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .link {
@@ -16,29 +16,26 @@
   }
   .action {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
   }
   .error {
     color: $red-700;
     font-size: 1.3rem;
     font-weight: 600;
   }
-
 }
 
-
-@media (min-width: 380px ) {
-  .add-product-navbar  {
+@media (min-width: 380px) {
+  .add-product-navbar {
     h1 {
       font-size: 1.2rem;
-
     }
   }
 }
-@media(min-width: 640px) {
-  .add-product-navbar  {
+@media (min-width: 640px) {
+  .add-product-navbar {
     h1 {
-      font-size: 1.5rem ;
+      font-size: 1.5rem;
     }
   }
 }
@@ -46,7 +43,7 @@
 @media (min-width: 1280px) {
   .navbar {
     h1 {
-      font-size: 2rem ;
+      font-size: 2rem;
     }
   }
 }
