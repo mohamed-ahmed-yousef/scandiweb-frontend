@@ -18,22 +18,6 @@ export function ShowProduct() {
 	return (
 		<section className={"home"}>
 			<NavBar checkedProducts={checkedProducts} />
-
-			{/*<button*/}
-			{/*	onClick={async () =>*/}
-			{/*		createProduct.mutate({*/}
-			{/*			sku: "DVD123",*/}
-			{/*			name: "Awesome Movie",*/}
-			{/*			price: 9.99,*/}
-			{/*			category: "DVD",*/}
-			{/*			size: 700,*/}
-			{/*		})*/}
-			{/*	}*/}
-			{/*	type="button"*/}
-			{/*>*/}
-			{/*	Click to add prodcut*/}
-			{/*</button>*/}
-
 			<section className={"products"}>
 				{!ProductsList?.data &&
 					Array.from({ length: 10 }).map((_, index) => (

@@ -33,7 +33,7 @@ export function Form({
 
 	return (
 		<form action={action} onSubmit={handleSubmit} noValidate className={"form"}>
-			<div className={"wrapper"}>{children}</div>
+			{children}
 		</form>
 	);
 }

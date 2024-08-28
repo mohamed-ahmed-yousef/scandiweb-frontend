@@ -26,7 +26,8 @@
     transition: all 0.1s ease-in-out;
     border: 1px solid $secondary;
     &:hover,
-    &:focus {
+    &:focus,
+    &.loading {
       background-color: $secondary;
       color: $white;
     }
@@ -41,7 +42,8 @@
 
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.loading {
       background-color: $primary;
       color: $white;
     }
@@ -52,13 +54,15 @@
     background: $red-700;
     color: $white;
 
-    &:hover
+    &:hover,
+    &.loading
     {
       background: $red-900;
     }
   }
 
-  }
+
+}
 
 @media (min-width: 380px ) {
   .button {
@@ -74,3 +78,16 @@
 }
 
 
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
