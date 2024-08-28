@@ -24,10 +24,17 @@ export function useMutation<T>({
 				setData(response);
 				setIsSuccess(true);
 			} catch (err) {
+				console.log(err, "erro");
 				if (err instanceof AxiosError) {
-					setError(err.response?.data);
+					if (typeof err.response?.data?.error === "string") {
+						setError(err.response?.data?.error);
+						// console.log(error, "error ")
+					} else {
+						setError("Something went wrong");
+					}
+				} else {
+					setError("Something went wrong");
 				}
-				setError("Something went wrong");
 			} finally {
 				setLoading(false);
 			}
