@@ -23,16 +23,18 @@ export function Card({
 					}
 				}}
 			/>
-			<h2>{product.sku}</h2>
-			<h2>{product.name}</h2>
-			<p>{product.price} $</p>
-			{product.category === "Book" && <p>Weight: {product.weight} KG</p>}
-			{product.category === "DVD" && <p>Size: {product.size} MB</p>}
-			{product.category === "Furniture" && (
-				<p>
-					Dimensions: {product.height} x {product.width} x {product.length}
-				</p>
-			)}
+			<div className={"product-info"}>
+				<p>{product.sku}</p>
+				<p>{product.name}</p>
+				<p>{product.price} $</p>
+				{product.category === "Book" && <p>Weight: {product.weight} KG</p>}
+				{product.category === "DVD" && <p>Size: {product.size} MB</p>}
+				{product.category === "Furniture" && (
+					<p>
+						Dimensions: {product.height} x {product.width} x {product.length}
+					</p>
+				)}
+			</div>
 		</section>
 	);
 }

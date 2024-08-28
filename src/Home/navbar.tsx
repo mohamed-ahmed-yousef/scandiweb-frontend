@@ -10,15 +10,14 @@ export function NavBar({ checkedProducts }: { checkedProducts: number[] }) {
 		<section className={"navbar"}>
 			<h1>Product List</h1>
 			<div className={"nav-link"}>
-				<Button variant={"secondary"}>
-					<Link className={"link"} to={"/addproduct"}>
-						Add Product
-					</Link>
-				</Button>
+				<Link className={"link"} to={"/addproduct"}>
+					<Button variant={"secondary"}>Add Product</Button>
+				</Link>
 				<Button
-					variant={"danger"}
+					variant={checkedProducts.length > 0 ? "danger" : "disabled"}
 					onClick={() => {
 						deleteProducts.mutate(checkedProducts);
+						window.location.reload();
 					}}
 				>
 					Mass delete
