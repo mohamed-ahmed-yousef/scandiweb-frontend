@@ -11,6 +11,7 @@ export function useMutation<T>({
 	const [data, setData] = useState<T | null>(null);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
+	const [isSuccess, setIsSuccess] = useState(false);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	const mutate = useCallback(
@@ -21,6 +22,7 @@ export function useMutation<T>({
 			try {
 				const response = await mutationFn(data);
 				setData(response);
+				setIsSuccess(true);
 			} catch (err) {
 				if (err instanceof AxiosError) {
 					setError(err.response?.data);
@@ -33,7 +35,7 @@ export function useMutation<T>({
 		[mutationFn],
 	);
 
-	return { mutate, data, loading, error };
+	return { mutate, data, loading, error, isSuccess };
 }
 
 export default useMutation;

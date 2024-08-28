@@ -1,54 +1,53 @@
 import { useState } from "react";
-import { Button } from "../components/button";
-import { Form } from "../components/form/form.tsx";
 import { TextInput } from "../components/input-text";
 import { Select } from "../components/select";
 
 export function AddProductForm() {
 	const [categoy, setCategory] = useState("");
-	const onSubmit = (data: FormData) => {
-		console.log(Object.fromEntries(data.entries()));
-	};
 
 	return (
-		<div>
-			<Form onSubmit={onSubmit}>
-				<TextInput
-					label="SKU"
-					id="name"
-					name="name"
-					required
-					placeholder={"#sku"}
-				/>
-				<TextInput
-					label="Name"
-					id="name"
-					type="text"
-					name="name"
-					placeholder={"#name"}
-					required
-				/>
-				<TextInput
-					label="Price"
-					id="price"
-					name="price"
-					placeholder={"#price"}
-					type={"number"}
-					min={0}
-					required
-				/>
+		<div className={"wrapper"}>
+			<TextInput
+				label="SKU"
+				id="sku"
+				name="sku"
+				required
+				placeholder={"#sku"}
+			/>
+			<TextInput
+				label="Name"
+				id="name"
+				type="text"
+				name="name"
+				placeholder={"#name"}
+				required
+			/>
+			<TextInput
+				label="Price"
+				id="price"
+				name="price"
+				placeholder={"#price"}
+				type={"number"}
+				min={0}
+				required
+			/>
 
-				<Select
-					group={"-- Type Switcher --"}
-					data={["DVD", "Book", "Furniture"]}
-					label={"label"}
-					name={"category"}
-					setCategory={setCategory}
-					required
-				/>
-				{categoy === "DVD" && (
+			<Select
+				group={"-- Type Switcher --"}
+				data={["DVD", "Book", "Furniture"]}
+				label={"label"}
+				name={"category"}
+				setCategory={setCategory}
+				required
+			/>
+			{!categoy && (
+				<h3>Please select a type to display the remaining fields</h3>
+			)}
+			{categoy === "DVD" && (
+				<>
+					<h3>Please, provide size</h3>
 					<TextInput
-						label={"Size"}
+						label={"Size (MB)"}
 						id="size"
 						name="size"
 						placeholder={"#size"}
@@ -56,11 +55,14 @@ export function AddProductForm() {
 						min={0}
 						required
 					/>
-				)}
+				</>
+			)}
 
-				{categoy === "Book" && (
+			{categoy === "Book" && (
+				<>
+					<h3>Please, provide weight</h3>
 					<TextInput
-						label={"Weight"}
+						label={"Weight (KG)"}
 						id="weight"
 						name="weight"
 						placeholder={"#weight"}
@@ -68,43 +70,41 @@ export function AddProductForm() {
 						type={"number"}
 						min={0}
 					/>
-				)}
-				{categoy === "Furniture" && (
-					<>
-						<TextInput
-							label={"Height"}
-							id="height"
-							name="height"
-							placeholder={"#height"}
-							type={"number"}
-							min={0}
-							required
-						/>
-						<TextInput
-							label={"Width"}
-							id="width"
-							name="width"
-							placeholder={"#width"}
-							type={"number"}
-							min={0}
-							required
-						/>
-						<TextInput
-							label={"Length"}
-							id="length"
-							name="length"
-							placeholder={"#length"}
-							type={"number"}
-							min={0}
-							required
-						/>
-					</>
-				)}
+				</>
+			)}
+			{categoy === "Furniture" && (
+				<>
+					<h3>Please, provide dimensions</h3>
 
-				<Button variant={"primary"} type={"submit"}>
-					Submit
-				</Button>
-			</Form>
+					<TextInput
+						label={"Height (CM)"}
+						id="height"
+						name="height"
+						placeholder={"#height"}
+						type={"number"}
+						min={0}
+						required
+					/>
+					<TextInput
+						label={"Width (CM)"}
+						id="width"
+						name="width"
+						placeholder={"#width"}
+						type={"number"}
+						min={0}
+						required
+					/>
+					<TextInput
+						label={"Length (CM)"}
+						id="length"
+						name="length"
+						placeholder={"#length"}
+						type={"number"}
+						min={0}
+						required
+					/>
+				</>
+			)}
 		</div>
 	);
 }

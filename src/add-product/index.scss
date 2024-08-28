@@ -18,6 +18,12 @@
     display: flex;
     gap: .5rem;
   }
+  .error {
+    color: $red-700;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
 }
 
 
