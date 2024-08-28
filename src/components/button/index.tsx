@@ -1,13 +1,20 @@
-import type { ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 import "./index.scss";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	children: ReactNode;
+	variant: string;
+	type?: "submit" | "button";
+}
 
 export function Button({
 	variant,
 	children,
 	type = "button",
-}: { variant: string; children: ReactNode; type?: "submit" | "button" }) {
+	...props
+}: ButtonProps) {
 	return (
-		<button className={`button ${variant}`} type={type}>
+		<button className={`button ${variant}`} type={type} {...props}>
 			{children}
 		</button>
 	);

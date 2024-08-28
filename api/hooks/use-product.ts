@@ -14,3 +14,8 @@ export function useCreateProduct() {
 		mutationFn: ClientAPI.product.createProduct,
 	});
 }
+export function useDeleteProducts() {
+	return useMutation<number[]>({
+		mutationFn: ClientAPI.product.deleteProducts,
+	});
+}
