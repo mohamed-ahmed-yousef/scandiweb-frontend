@@ -1,7 +1,35 @@
 # scandiweb Junior Developer test assignment!
 
 ## Library used & Why?
-- `biome`: For linting & styling code. It ensures code consistency and enforces best practices by automatically fixing styling issues.
-- `lefthook`: For pre-commit actions. It manages Git hooks to automate tasks like running tests, linters.
-- `axios`: Is a promise-based HTTP client that simplifies making asynchronous requests, handling responses, and managing errors.
-- `react-router-dom`: To manage routing.
+
+- `React`: A frontend library.
+- `TypeScript`: Enables type safety.
+- `React Router DOM`: Manages routing.
+- `Biome`: Lints and styles code, ensuring consistency and enforcing best practices.
+- `Lefthook`: Manages pre-commit Git hooks for tasks like running tests and linters.
+- `Axios`: A promise-based HTTP client for making asynchronous requests and handling responses.
+- `SCSS`: Used for styling.
+
+## Project Structure
+
+### *Endpoint calls*:
+- Implement my `API Layer` in this folder.
+- Implement my own `useQuery`, `useMutation` to help me manage endpoint calls.
+- trying in this folder to simplify the way I will call endpoint in the `view layer`
+
+### *src folder*:
+- has a four folders one for `shared components`, second for `add-product` page, third for `home page`, and last for `manage routing`
+- implement a custom input validation `input field`
+- implement a shared `button` with props like `variants`.
+
+### *Utils*:
+- Includes helper functions, shared hooks, and project constants, if available.
+
+## Instructions to use this application
+```shell
+    git clone git@github.com:mohamed-ahmed-yousef/scandiweb-frontend.git;
+    cd scandiweb-frontend;
+    pnpm i;
+    pnpm run dev
+```
+
