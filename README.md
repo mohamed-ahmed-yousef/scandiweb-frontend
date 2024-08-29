@@ -12,17 +12,17 @@
 
 ## Project Structure
 
-### *Endpoint calls*:
+### *Endpoint calls* :
 - Implement my `API Layer` in this folder.
 - Implement my own `useQuery`, `useMutation` to help me manage endpoint calls.
 - trying in this folder to simplify the way I will call endpoint in the `view layer`
 
-### *src folder*:
+### *src folder* :
 - has a four folders one for `shared components`, second for `add-product` page, third for `home page`, and last for `manage routing`
 - implement a custom input validation `input field`
 - implement a shared `button` with props like `variants`.
 
-### *Utils*:
+### *Utils* :
 - Includes helper functions, shared hooks, and project constants, if available.
 
 ## Instructions to use this application
