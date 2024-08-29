@@ -1,0 +1,9 @@
+services:
+  scandiweb-test-assignment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BACKEND_URL=http://localhost

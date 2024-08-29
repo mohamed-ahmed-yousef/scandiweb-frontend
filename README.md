@@ -1,4 +1,4 @@
-# scandiweb Junior Developer test assignment!
+# Scandiweb Junior Developer test assignment!
 
 ## Library used & Why?
 
@@ -26,10 +26,18 @@
 - Includes helper functions, shared hooks, and project constants, if available.
 
 ## Instructions to use this application
+
 ```shell
     git clone git@github.com:mohamed-ahmed-yousef/scandiweb-frontend.git;
     cd scandiweb-frontend;
     pnpm i;
-    pnpm run dev
+    pnpm run dev;
+    # then go to localhost:5173
 ```
-
+- using docker
+```shell
+    git clone git@github.com:mohamed-ahmed-yousef/scandiweb-frontend.git;
+    cd scandiweb-frontend;
+    docker compose up --build -d;
+    # then go to localhost:5173
+```
