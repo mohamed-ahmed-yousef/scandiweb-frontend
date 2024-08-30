@@ -13,9 +13,7 @@ import { ProductSkeleton } from "./skeleton.tsx";
 export function ShowProduct() {
 	const [checkedProducts, setCheckedProducts] = useState<number[]>([]);
 	const ProductsList = useGetProducts();
-	// const createProduct = useCreateProduct();
 
-	// @ts-ignore
 	return (
 		<section className={"home"}>
 			<NavBar checkedProducts={checkedProducts} />
@@ -25,7 +23,7 @@ export function ShowProduct() {
 			/>
 			<section className={"products"}>
 				{!ProductsList?.data &&
-					Array.from({ length: 10 }).map((_, index) => (
+					Array.from({ length: 8 }).map((_, index) => (
 						<>
 							<ProductSkeleton key={index.toString()} />
 						</>
