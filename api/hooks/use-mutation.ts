@@ -25,13 +25,11 @@ export function useMutation<T>({
 				setIsSuccess(true);
 			} catch (err) {
 				console.log(err, "erro");
-				if (err instanceof AxiosError) {
-					if (typeof err.response?.data?.error === "string") {
-						setError(err.response?.data?.error);
-						// console.log(error, "error ")
-					} else {
-						setError("Something went wrong");
-					}
+				if (
+					err instanceof AxiosError &&
+					typeof err.response?.data?.message === "string"
+				) {
+					setError(err.response?.data?.message);
 				} else {
 					setError("Something went wrong");
 				}

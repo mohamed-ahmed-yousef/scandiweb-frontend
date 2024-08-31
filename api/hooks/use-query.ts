@@ -13,10 +13,14 @@ export function useQuery<T>({ queryFn }: { queryFn: QueryFn<T> }) {
 			const response = await queryFn();
 			setData(response);
 		} catch (error) {
-			if (error instanceof AxiosError) {
-				setError(error.response?.data);
+			if (
+				error instanceof AxiosError &&
+				typeof error.response?.data?.message === "string"
+			) {
+				setError(error.response?.data?.message);
+			} else {
+				setError("Something went wrong");
 			}
-			setError("Something went wrong");
 		} finally {
 			setLoading(false);
 		}
