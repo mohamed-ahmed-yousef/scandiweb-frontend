@@ -1,5 +1,8 @@
 # Scandiweb Junior Developer test assignment!
 
+## [Hosted Frontned URL](http://20.106.235.162:5173/)
+
+
 ## Backend URL
 - [link](https://github.com/mohamed-ahmed-yousef/scandiweb-backend)
 
@@ -45,4 +48,6 @@
     # then go to localhost:5173
 ```
 ## QA Testing Image
+- [link](http://165.227.98.170/reports/20-106-235-162-1725215109670/index.html)
+- Image
 ![img.png](img.png)
