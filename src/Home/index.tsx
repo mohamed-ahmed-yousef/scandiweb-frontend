@@ -6,9 +6,9 @@ import {
 import { Card } from "../components/card";
 import "./index.scss";
 import { useState } from "react";
-import { NavBar } from "./navbar.tsx";
-import { NoProductItem } from "./no-data.tsx";
-import { ProductSkeleton } from "./skeleton.tsx";
+import { NavBar } from "./navbar/navbar.tsx";
+import { NoProductItem } from "./no-data/no-data.tsx";
+import { ProductSkeleton } from "./skeleton/skeleton.tsx";
 
 export function ShowProduct() {
 	const [checkedProducts, setCheckedProducts] = useState<number[]>([]);

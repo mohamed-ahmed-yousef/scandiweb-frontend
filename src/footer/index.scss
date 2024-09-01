@@ -1,0 +1,22 @@
+@import "../index";
+.footer {
+  text-align: center;
+  border-top: 1px solid $gray-400;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $gray-200;
+  padding: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .footer {
+    font-weight: 600;
+  }
+  .footer p {
+    font-size: 1.5rem;
+  }
+}
+.footer-height {
+  height: 8rem;
+}

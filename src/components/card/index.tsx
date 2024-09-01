@@ -13,6 +13,8 @@ export function Card({
 		<section className={"product"}>
 			<input
 				type={"checkbox"}
+				className="delete-checkbox"
+				id={"delete-checkbox"}
 				onChange={(value) => {
 					if (value.target.checked) {
 						setCheckedProducts((prev) => [...prev, product.id]);
