@@ -24,7 +24,6 @@ export function useMutation<T>({
 				setData(response);
 				setIsSuccess(true);
 			} catch (err) {
-				console.log(err, "erro");
 				if (
 					err instanceof AxiosError &&
 					typeof err.response?.data?.message === "string"

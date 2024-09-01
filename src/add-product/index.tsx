@@ -12,8 +12,6 @@ export default function AddProduct() {
 		// @ts-ignore
 		createProduct.mutate(Object.fromEntries(data.entries()));
 	};
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	console.log(createProduct.error, "createProduct.error");
 	useEffect(() => {
 		if (createProduct.isSuccess) window.location.href = "/";
 	}, [createProduct.isSuccess]);
