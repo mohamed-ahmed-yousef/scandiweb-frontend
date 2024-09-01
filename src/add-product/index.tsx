@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/button";
 import { AddProductForm } from "./form.tsx";
 import "./index.scss";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useCreateProduct } from "../../api/hooks/use-product.ts";
 import { Form } from "../components/form/form.tsx";
 
@@ -11,10 +11,10 @@ export default function AddProduct() {
 	const onSubmit = (data: FormData) => {
 		// @ts-ignore
 		createProduct.mutate(Object.fromEntries(data.entries()));
+		window.location.href = "/";
 	};
-	useEffect(() => {
-		if (createProduct.isSuccess) window.location.href = "/";
-	}, [createProduct.isSuccess]);
+	// useEffect(() => {
+	// }, [createProduct.isSuccess]);
 	return (
 		<main className={"add-product"}>
 			<Form onSubmit={onSubmit}>
