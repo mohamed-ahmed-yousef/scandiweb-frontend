@@ -58,6 +58,7 @@ export function AddProductForm() {
 						placeholder={"#size"}
 						min={0}
 						required
+						type={"number"}
 					/>
 				</>
 			)}
@@ -72,6 +73,7 @@ export function AddProductForm() {
 						placeholder={"#weight"}
 						required
 						min={0}
+						type={"number"}
 					/>
 				</>
 			)}
@@ -84,6 +86,7 @@ export function AddProductForm() {
 						id="height"
 						name="height"
 						placeholder={"#height"}
+						type={"number"}
 						min={0}
 						required
 					/>
