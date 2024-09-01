@@ -9,7 +9,7 @@ export function NoProductItem({
 	return (
 		<div className="no-data">
 			<img alt={"No data"} src={document} className={"image"} />
-			<h1>No products. Add one to show.</h1>
+			<h1>No products to show.</h1>
 		</div>
 	);
 }
