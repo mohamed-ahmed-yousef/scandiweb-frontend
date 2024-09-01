@@ -19,7 +19,7 @@ export function NavBar({ checkedProducts }: { checkedProducts: number[] }) {
 			)}
 			<div className={"nav-link"}>
 				<Link className={"link"} to={"/addproduct"}>
-					<Button variant={"secondary"}>Add Product</Button>
+					<Button variant={"secondary"}>ADD</Button>
 				</Link>
 
 				<Button
@@ -32,7 +32,7 @@ export function NavBar({ checkedProducts }: { checkedProducts: number[] }) {
 					}}
 					isLoading={deleteProducts.loading}
 				>
-					Mass delete
+					MASS DELETE
 				</Button>
 			</div>
 		</section>
