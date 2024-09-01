@@ -28,7 +28,7 @@ export function AddProductForm() {
 				name="price"
 				placeholder={"#price"}
 				type={"number"}
-				min={0}
+				// min={0}
 				required
 			/>
 
@@ -56,7 +56,7 @@ export function AddProductForm() {
 						id="size"
 						name="size"
 						placeholder={"#size"}
-						min={0}
+						// min={0}
 						required
 						type={"number"}
 					/>
@@ -72,7 +72,7 @@ export function AddProductForm() {
 						name="weight"
 						placeholder={"#weight"}
 						required
-						min={0}
+						// min={0}
 						type={"number"}
 					/>
 				</>
@@ -87,7 +87,7 @@ export function AddProductForm() {
 						name="height"
 						placeholder={"#height"}
 						type={"number"}
-						min={0}
+						// min={0}
 						required
 					/>
 					<TextInput
@@ -96,7 +96,7 @@ export function AddProductForm() {
 						name="width"
 						placeholder={"#width"}
 						type={"number"}
-						min={0}
+						// min={0}
 						required
 					/>
 					<TextInput
@@ -105,7 +105,7 @@ export function AddProductForm() {
 						name="length"
 						placeholder={"#length"}
 						type={"number"}
-						min={0}
+						// min={0}
 						required
 					/>
 				</>
