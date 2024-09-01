@@ -32,7 +32,13 @@ export function Form({
 	};
 
 	return (
-		<form action={action} onSubmit={handleSubmit} noValidate className={"form"}>
+		<form
+			action={action}
+			id="product_form"
+			onSubmit={handleSubmit}
+			noValidate
+			className={"form"}
+		>
 			{children}
 		</form>
 	);

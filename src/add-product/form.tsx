@@ -34,10 +34,15 @@ export function AddProductForm() {
 
 			<Select
 				group={"-- Type Switcher --"}
-				data={["DVD", "Book", "Furniture"]}
+				data={[
+					{ label: "DVD", id: "DVD" },
+					{ label: "Book", id: "Book" },
+					{ label: "Furniture", id: "Furniture" },
+				]}
 				label={"label"}
 				name={"category"}
 				setCategory={setCategory}
+				id="productType"
 				required
 			/>
 			{!categoy && (
@@ -51,7 +56,6 @@ export function AddProductForm() {
 						id="size"
 						name="size"
 						placeholder={"#size"}
-						type={"number"}
 						min={0}
 						required
 					/>
@@ -67,7 +71,6 @@ export function AddProductForm() {
 						name="weight"
 						placeholder={"#weight"}
 						required
-						type={"number"}
 						min={0}
 					/>
 				</>
@@ -81,7 +84,6 @@ export function AddProductForm() {
 						id="height"
 						name="height"
 						placeholder={"#height"}
-						type={"number"}
 						min={0}
 						required
 					/>
