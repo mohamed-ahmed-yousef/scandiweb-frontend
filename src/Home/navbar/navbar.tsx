@@ -11,9 +11,7 @@ export function NavBar({ checkedProducts }: { checkedProducts: number[] }) {
 	}, [deleteProducts.isSuccess]);
 	return (
 		<section className={"navbar"}>
-			<Link to={"/"}>
-				<h1>Product List</h1>
-			</Link>
+			<h1>Product List</h1>
 			{deleteProducts.error && (
 				<p className={"error"}>{deleteProducts.error}</p>
 			)}
