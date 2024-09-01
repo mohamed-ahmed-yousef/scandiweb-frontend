@@ -1,5 +1,8 @@
 # Scandiweb Junior Developer test assignment!
 
+## Backend URL
+- [link](https://github.com/mohamed-ahmed-yousef/scandiweb-backend)
+
 ## Library used & Why?
 
 - `React`: A frontend library.
@@ -41,3 +44,5 @@
     docker compose up --build -d;
     # then go to localhost:5173
 ```
+## QA Testing Image
+![img.png](img.png)

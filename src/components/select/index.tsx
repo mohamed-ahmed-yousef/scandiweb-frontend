@@ -1,5 +1,6 @@
 import ".//index.scss";
 import type { Dispatch, SetStateAction } from "react";
+import type { CategoryType } from "../../add-product/form.tsx";
 
 export function Select({
 	data,
@@ -15,7 +16,7 @@ export function Select({
 	name: string;
 	group: string;
 	required: boolean;
-	setCategory: Dispatch<SetStateAction<string>>;
+	setCategory: Dispatch<SetStateAction<CategoryType>>;
 	id: string;
 }) {
 	return (
@@ -28,7 +29,7 @@ export function Select({
 				className="select"
 				id={id}
 				name={name}
-				onChange={(e) => setCategory(e.target.value)}
+				onChange={(e) => setCategory(e.target.value as CategoryType)}
 			>
 				<>
 					<option value={""} style={{ fontWeight: "bold" }}>
